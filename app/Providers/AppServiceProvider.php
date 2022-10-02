@@ -13,7 +13,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        app()->bind('my_service', function(){
+            dd('this is my first service container');
+        });
+
+        app()->bind('my_service2', function(){
+            dd('this is my second service container');
+        });
     }
 
     /**
